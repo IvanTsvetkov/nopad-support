@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoPad Support</title>
+<style>
+:root {
+  --bg: #faf8f4; --panel: #f2ece1; --text: #2b2b2b; --dim: #6b6459;
+  --accent: #8a5a2b; --line: #e0d8c9;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #16150f; --panel: #1f1d16; --text: #e8e4da; --dim: #9d968a;
+          --accent: #d2a05f; --line: #2e2b22; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+header { background: var(--panel); border-bottom: 1px solid var(--line); }
+header div { max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem; }
+h1 { font-size: 1.9rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+header p { margin: 0; color: var(--dim); }
+h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--accent); margin: 2.6rem 0 .8rem; }
+h3 { font-size: 1rem; margin: 1.8rem 0 .5rem; }
+ul { padding-left: 1.1rem; }
+li { margin: .35rem 0; }
+a { color: var(--accent); }
+code, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+kbd { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 0 .3em; }
+footer { color: var(--dim); font-size: .88rem; border-top: 1px solid var(--line);
+  margin-top: 3rem; padding-top: 1.2rem; }
+.lede { font-size: 1.08rem; }
+</style>
+</head>
+<body>
+<header><div><h1>NoPad Support</h1><p>A scratch editor for structured text, for macOS.</p></div></header>
+<main>
+
+<p class="lede">NoPad is a scratch editor for structured text on macOS. Paste JSON, CSV, YAML, SQL
+or a log into it and it works out what the text is from its content and formats it. There is no
+save step, no account and no network.</p>
+
+<h2>Getting help</h2>
+<p>Write to <a href="mailto:ivanscvetkovs@icloud.com">ivanscvetkovs@icloud.com</a>. That address reaches the person who wrote the
+app. Include your macOS version and, if something went wrong, what you were doing when it did.</p>
+
+<h2>Questions that come up</h2>
+
+<h3>Where is my text? I never saved it.</h3>
+<p>It is kept. Every buffer is written to NoPad's own private storage as you type and again when
+you quit, so it is there when you come back, including after a restart. That is why there is no
+save step and no prompt when you close a tab. Pressing <kbd>&#8984;S</kbd> confirms it.</p>
+
+<h3>How do I get a file out of NoPad?</h3>
+<p><kbd>&#8679;&#8984;E</kbd> exports the buffer to a location you choose. It is the only action
+that writes anywhere outside NoPad's own storage.</p>
+
+<h3>How do I delete a buffer?</h3>
+<p><kbd>&#8679;&#8984;W</kbd> discards it, with ten seconds to undo. <kbd>&#8984;W</kbd> only
+closes the tab &mdash; the buffer stays in the sidebar and <kbd>&#8679;&#8984;T</kbd> brings it
+back.</p>
+
+<h3>It opened my file in a mode I did not expect.</h3>
+<p>NoPad reads content, not file extensions: a <code>.txt</code> full of JSON is treated as JSON,
+and a CSV opens in the table view. Files over the large-file threshold open mapped, with
+highlighting and the minimap off &mdash; that is deliberate, not a fault. The format can be
+overridden from the status bar.</p>
+
+<h3>Does it send anything anywhere?</h3>
+<p>No. There is no networking code in the app at all. Disconnect from the internet entirely and
+every feature works exactly as it did. The full privacy policy is inside the app, under
+<strong>About NoPad</strong>, and on <a href="privacy.html">this site</a>.</p>
+
+<h3>Does it sync between Macs?</h3>
+<p>Not in this version. Buffers and settings stay on the Mac they were made on.</p>
+
+<h2>Reporting a bug</h2>
+<p>Email the address above. What helps most: what you pasted or opened (or its shape, if it is
+private &mdash; never send anything confidential), what you expected, and what happened instead.</p>
+
+<footer>NoPad is a Mac app by Ivans Cvetkovs. Questions: <a href="mailto:ivanscvetkovs@icloud.com">ivanscvetkovs@icloud.com</a>.<br>
+This site exists because the App Store requires a support address. The app itself links nowhere.</footer>
+</main>
+</body>
+</html>
