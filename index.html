@@ -35,52 +35,32 @@ footer { color: var(--dim); font-size: .88rem; border-top: 1px solid var(--line)
 </style>
 </head>
 <body>
-<header><div><h1>NoPad Support</h1><p>A scratch editor for structured text, for macOS.</p></div></header>
+<header><div><h1>NoPad Support</h1><p>Scratch buffers on Mac, iPad and iPhone.</p></div></header>
 <main>
-
-<p class="lede">NoPad is a scratch editor for structured text on macOS. Paste JSON, CSV, YAML, SQL
-or a log into it and it works out what the text is from its content and formats it. There is no
-save step, no account and no network.</p>
-
+<p><a href="index.html">Support</a> · <a href="privacy.html">Privacy policy</a></p>
+<p>NoPad keeps scratch text in buffers across sessions, without asking you to name or save a file. Mac and iPad can edit buffers; iPhone can search, read, preview, copy and share them. Version 1.4 adds optional iCloud sync across compatible devices signed into the same Apple Account.</p>
 <h2>Getting help</h2>
-<p>Write to <a href="mailto:ivanscvetkovs@icloud.com">ivanscvetkovs@icloud.com</a>. That address reaches the person who wrote the
-app. Include your macOS version and, if something went wrong, what you were doing when it did.</p>
-
-<h2>Questions that come up</h2>
-
-<h3>Where is my text? I never saved it.</h3>
-<p>It is kept. Every buffer is written to NoPad's own private storage as you type and again when
-you quit, so it is there when you come back, including after a restart. That is why there is no
-save step and no prompt when you close a tab. Pressing <kbd>&#8984;S</kbd> confirms it.</p>
-
-<h3>How do I get a file out of NoPad?</h3>
-<p><kbd>&#8679;&#8984;E</kbd> exports the buffer to a location you choose. It is the only action
-that writes anywhere outside NoPad's own storage.</p>
-
-<h3>How do I delete a buffer?</h3>
-<p><kbd>&#8679;&#8984;W</kbd> discards it, with ten seconds to undo. <kbd>&#8984;W</kbd> only
-closes the tab &mdash; the buffer stays in the sidebar and <kbd>&#8679;&#8984;T</kbd> brings it
-back.</p>
-
-<h3>It opened my file in a mode I did not expect.</h3>
-<p>NoPad reads content, not file extensions: a <code>.txt</code> full of JSON is treated as JSON,
-and a CSV opens in the table view. Files over the large-file threshold open mapped, with
-highlighting and the minimap off &mdash; that is deliberate, not a fault. The format can be
-overridden from the status bar.</p>
-
-<h3>Does it send anything anywhere?</h3>
-<p>No. There is no networking code in the app at all. Disconnect from the internet entirely and
-every feature works exactly as it did. The full privacy policy is inside the app, under
-<strong>About NoPad</strong>, and on <a href="privacy.html">this site</a>.</p>
-
-<h3>Does it sync between Macs?</h3>
-<p>Not in this version. Buffers and settings stay on the Mac they were made on.</p>
-
-<h2>Reporting a bug</h2>
-<p>Email the address above. What helps most: what you pasted or opened (or its shape, if it is
-private &mdash; never send anything confidential), what you expected, and what happened instead.</p>
-
-<footer>NoPad is a Mac app by Ivans Cvetkovs. Questions: <a href="mailto:ivanscvetkovs@icloud.com">ivanscvetkovs@icloud.com</a>.<br>
+<p>Email <strong>ivanscvetkovs@icloud.com</strong>. Include your NoPad and operating-system versions, your device, what you were doing, what you expected and what happened. An example with confidential information removed is useful. Do not send private buffers or Apple Account credentials.</p>
+<h2>Where is my text if I did not save it?</h2>
+<p>NoPad keeps buffers in its own app storage as you work. No manual file save is needed, and a buffer is there when you reopen NoPad. On Mac, closing a tab with <strong>Command-W</strong> keeps the buffer in the sidebar; <strong>Shift-Command-T</strong> reopens a closed tab. <strong>Command-S</strong> reports local save status. The app reports a save failure if it cannot retain a change.</p>
+<h2>How do I export or delete a buffer?</h2>
+<p>On Mac, <strong>Shift-Command-E</strong> opens Export and writes a copy to a location you choose. <strong>Shift-Command-W</strong> discards a buffer and offers a ten-second Undo window. On iPad, use the buffer actions to share or delete it. iPhone can copy or share content but does not edit or delete buffers. When sync is enabled, a deletion also removes the buffer from the synced library. Your original source file is not deleted by discarding its scratch buffer.</p>
+<h2>How do I sync between devices?</h2>
+<p>Use a compatible version of NoPad on each device and sign into the same Apple Account. In NoPad&#x27;s iCloud Sync settings on each device, read the explanation and enable sync. On Mac, choose <strong>Settings &gt; iCloud Sync &gt; Enable iCloud Sync</strong>. Existing eligible library buffers become eligible for upload; sync is not a per-buffer selection. NoPad has no separate account or subscription for this feature.</p>
+<p>Sync needs a working iCloud account, internet access and sufficient iCloud storage. Downloaded buffers remain available offline. On Mac, <strong>Sync Now</strong> requests a refresh; the Status section explains account, connection or storage failures. iPhone is a reader: it receives buffers but does not upload edits.</p>
+<h2>Why is a buffer missing from another device?</h2>
+<p>Check that sync is enabled on both devices and read their sync status. Mapped files and buffers above the 14 MB sync limit remain on their original device. A buffer that grows beyond the limit keeps its larger local version and removes its earlier cloud copy. After shrinking below the limit it can sync again.</p>
+<h2>What happens if I edit on Mac and iPad?</h2>
+<p>NoPad keeps a separate conflict copy when it cannot safely choose one version. On Mac, the conflict notice offers <strong>Compare</strong>. Review both copies before discarding content you no longer need.</p>
+<h2>What does turning sync off do?</h2>
+<p>It stops further sync and keeps the local and cloud copies. To remove a buffer from the synced library, discard it on Mac or iPad while sync is enabled. You can also use Apple&#x27;s iCloud storage controls to remove NoPad cloud data. Turn sync off on your devices first if you do not want existing local buffers uploaded again.</p>
+<h2>Why does a file open in Table, Tree or large-file mode?</h2>
+<p>On Mac, NoPad identifies text from its content, not just its extension. CSV and TSV can open as tables. The format can be changed from the status bar. Files above your large-file threshold open mapped, with highlighting and the minimap off. Source remains available when a structured preview exceeds its inspection limits.</p>
+<h2>Does NoPad send text over the internet?</h2>
+<p>Text processing runs locally. Optional iCloud sync sends eligible buffers to your private CloudKit database hosted by Apple after you enable it. NoPad has no developer analytics, advertising, tracking or AI service. The privacy page explains the information synced and how deletion works.</p>
+<h2>Which release does this page describe?</h2>
+<p>This page describes NoPad 1.4 on Mac, iPad and iPhone. NoPad 1.3 for Mac keeps its buffers local and does not include iCloud sync. Platform availability depends on the App Store release status in your region.</p>
+<footer>NoPad is an app by Ivans Cvetkovs. Questions: <a href="mailto:ivanscvetkovs@icloud.com">ivanscvetkovs@icloud.com</a>.<br>
 This site exists because the App Store requires a support address. The app itself links nowhere.</footer>
 </main>
 </body>
