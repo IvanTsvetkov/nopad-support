@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NoPad: CSV Viewer and Table Editor for Mac and iPad</title>
+<meta name="description" content="Read and edit CSV and TSV as a table. NoPad detects the delimiter, keeps your values as they are, and never touches the original file. Free on Mac and iPad.">
+<link rel="canonical" href="https://ivantsvetkov.github.io/nopad-support/csv-viewer.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="apple-itunes-app" content="app-id=6802018107">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16150f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NoPad">
+<meta property="og:title" content="NoPad: CSV Viewer and Table Editor for Mac and iPad">
+<meta property="og:description" content="Read and edit CSV and TSV as a table. NoPad detects the delimiter, keeps your values as they are, and never touches the original file. Free on Mac and iPad.">
+<meta property="og:url" content="https://ivantsvetkov.github.io/nopad-support/csv-viewer.html">
+<meta property="og:image" content="https://ivantsvetkov.github.io/nopad-support/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The NoPad app icon beside the words Scratch text, kept for later.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NoPad: CSV Viewer and Table Editor for Mac and iPad">
+<meta name="twitter:description" content="Read and edit CSV and TSV as a table. NoPad detects the delimiter, keeps your values as they are, and never touches the original file. Free on Mac and iPad.">
+<meta name="twitter:image" content="https://ivantsvetkov.github.io/nopad-support/assets/og-image.png">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<style>
+:root {
+  --bg: #faf8f4; --panel: #f2ece1; --text: #2b2b2b; --dim: #6b6459;
+  --accent: #8a5a2b; --line: #e0d8c9;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #16150f; --panel: #1f1d16; --text: #e8e4da; --dim: #9d968a;
+          --accent: #d2a05f; --line: #2e2b22; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+main { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+header { background: var(--panel); border-bottom: 1px solid var(--line); }
+header div { max-width: 44rem; margin: 0 auto; padding: 2rem 1.25rem; }
+h1 { font-size: 1.9rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+header p { margin: 0; color: var(--dim); }
+h2 { font-size: .82rem; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--accent); margin: 2.6rem 0 .8rem; }
+h3 { font-size: 1rem; margin: 1.8rem 0 .5rem; }
+ul { padding-left: 1.1rem; }
+li { margin: .35rem 0; }
+a { color: var(--accent); }
+code, kbd { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+kbd { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 0 .3em; }
+footer { color: var(--dim); font-size: .88rem; border-top: 1px solid var(--line);
+  margin-top: 3rem; padding-top: 1.2rem; }
+.lede { font-size: 1.08rem; }
+.cta { display: inline-block; margin-top: .9rem; background: var(--accent); color: var(--bg);
+  text-decoration: none; font-weight: 600; padding: .45rem .9rem; border-radius: 999px; }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://ivantsvetkov.github.io/nopad-support/csv-viewer.html#webpage", "url": "https://ivantsvetkov.github.io/nopad-support/csv-viewer.html", "name": "NoPad: CSV Viewer and Table Editor for Mac and iPad", "description": "Read and edit CSV and TSV as a table. NoPad detects the delimiter, keeps your values as they are, and never touches the original file. Free on Mac and iPad.", "inLanguage": "en", "isPartOf": {"@id": "https://ivantsvetkov.github.io/nopad-support/#website"}}, {"@type": "FAQPage", "@id": "https://ivantsvetkov.github.io/nopad-support/csv-viewer.html#faq", "mainEntity": [{"@type": "Question", "name": "Is NoPad free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. NoPad is free on the App Store, with no subscription and no in-app purchases."}}, {"@type": "Question", "name": "Does it change my original file?", "acceptedAnswer": {"@type": "Answer", "text": "No. Opening a file imports it as a buffer, and Export writes a copy only when you choose to."}}, {"@type": "Question", "name": "Can it open a very large CSV?", "acceptedAnswer": {"@type": "Answer", "text": "On Mac, NoPad opens multi-gigabyte files by mapping them instead of loading them whole, so a large file can be read and searched. Table view has a limit on large inputs and falls back to the source view when it reaches it."}}]}]}</script>
+</head>
+<body>
+<header><div><h1>NoPad: CSV Viewer and Table Editor for Mac and iPad</h1><p>Open CSV and TSV as a table, without an import dialog.</p>
+<p><a class="cta" href="https://apps.apple.com/app/id6802018107">Get NoPad on the App Store</a></p></div></header>
+<main>
+<p><a href="index.html">Support</a> · <a href="json-formatter.html">JSON formatter</a> · <a href="csv-viewer.html">CSV viewer</a> · <a href="log-viewer.html">Log viewer</a> · <a href="privacy.html">Privacy policy</a></p>
+<p>NoPad opens CSV and TSV as a table you can read and edit. It works out the delimiter from the text itself, so a pasted export or a downloaded file becomes rows and columns without an import dialog, and without a spreadsheet changing your data.</p>
+<h2>What it does with CSV</h2>
+<ul><li><strong>Shows a table.</strong> Paste or open a CSV or TSV and read it in rows and columns.</li><li><strong>Edits cells on Mac.</strong> Change a value in the table on Mac, and the text underneath follows.</li><li><strong>Lets you set the delimiter and header.</strong> The detected delimiter and header row can both be overridden when a file is unusual.</li><li><strong>Keeps your values as they are.</strong> Quoted empty fields stay data, and a value like 007 stays 007.</li><li><strong>Formats in place.</strong> Lay out a CSV or TSV as an edit you can undo.</li><li><strong>Finds and compares.</strong> Search a file or every open buffer, and compare two buffers in a split diff.</li></ul>
+<h2>On Mac, iPad and iPhone</h2>
+<p>Mac has the editable table. iPad edits the source and previews CSV and TSV as a table beside it, with the same delimiter and header controls. iPhone is a reader for buffers synced from your other devices. Sync is optional and uses your own private iCloud storage.</p>
+<h2>Questions</h2>
+<h2>Is NoPad free?</h2>
+<p>Yes. NoPad is free on the App Store, with no subscription and no in-app purchases.</p>
+<h2>Does it change my original file?</h2>
+<p>No. Opening a file imports it as a buffer, and Export writes a copy only when you choose to.</p>
+<h2>Can it open a very large CSV?</h2>
+<p>On Mac, NoPad opens multi-gigabyte files by mapping them instead of loading them whole, so a large file can be read and searched. Table view has a limit on large inputs and falls back to the source view when it reaches it.</p>
+<footer>NoPad is a free app by Ivans Cvetkovs — <a href="https://apps.apple.com/app/id6802018107">see it on the App Store</a>.<br>
+Questions: <a href="mailto:ivanscvetkovs@icloud.com">ivanscvetkovs@icloud.com</a>.</footer>
+</main>
+</body>
+</html>
